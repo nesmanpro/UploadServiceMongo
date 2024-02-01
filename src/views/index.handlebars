@@ -1,0 +1,15 @@
+<main>
+
+    {{#each images}}
+        <div class="card">
+            <img src={{this.path}} alt="">
+            <h3> {{this.title}} </h3>
+            <p> {{this.description}} </p>
+            <button>
+
+            <a href="/image/{{this.id}}/delete"> Eliminar </a>
+            </button>
+        </div>
+    {{/each}}
+
+</main>
