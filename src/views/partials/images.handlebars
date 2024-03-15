@@ -1,0 +1,14 @@
+<container class="gridContainer">
+        {{#each images}}
+            <div class="card">
+                <img src={{this.path}} alt="">
+                <div class="textCard">
+                    <h3> {{this.title}} </h3>
+                    <p> {{this.description}} </p>
+                    <button>
+                        <a href="/image/{{this.id}}/delete"> Eliminar </a>
+                    </button>
+                </div>
+            </div>
+        {{/each}}
+    </container>

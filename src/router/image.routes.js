@@ -17,13 +17,13 @@ router.get('/', async (req, res) => {
         }
     })
 
-    res.render('index', { images: newArray });
+    res.render('index', { images: newArray, user: req.session.user });
 })
 
 // Ruta para acceder a formulario para cargar imgs
 router.get('/upload', async (req, res) => {
 
-    res.render('upload', { title: 'Upload' });
+    res.render('upload', { title: 'Upload', user: req.session.user });
 })
 
 // Ruta post
@@ -42,7 +42,15 @@ router.post('/upload', async (req, res) => {
 
 // eliminar img
 
-router.get('/image/:id/delete', async (req, res) => {
+const requireAuth = (req, res, next) => {
+    if (req.session.user) {
+        next();
+    } else {
+        res.redirect('/login')
+    }
+}
+
+router.get('/image/:id/delete', requireAuth, async (req, res) => {
     const { id } = req.params;
 
     const img = await imageModels.findByIdAndDelete(id) //Borramos de la bd la imagen y mne guardo la referencia
