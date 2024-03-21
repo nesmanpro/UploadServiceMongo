@@ -15,9 +15,6 @@ router.get("/", (reg, res) => {
     res.render('main', { user: reg.session.user })
 })
 
-router.get("/", (reg, res) => {
-    res.render('main', { user: reg.session.user })
-})
 
 // router.get('/profile', (req, res) => {
 //     res.render('profile');

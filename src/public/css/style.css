@@ -1,15 +1,26 @@
+:root {
+    --primary: darkslategray;
+    --secondary: #ccc;
+    --light: #fff;
+    --darklight: #f6f6f6;
+    --darkPrim: #f6f6f6;
+
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
 }
+
 
 h1 {
     text-align: center;
     font-weight: 800;
     font-size: x-large;
-    color: darkslategray;
+    color: var(--primary);
 }
 
 /* header */
@@ -18,7 +29,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: darkolivegreen;
+    background-color: var(--primary);
     padding: 20px 0px;
     margin-bottom: 40px;
 }
@@ -26,7 +37,7 @@ header {
 li, li a {
     text-decoration: none;
     list-style: none;
-    color: #fff;
+    color: var(--light);
     cursor: pointer;
     font-weight: 600;
 }
@@ -35,7 +46,7 @@ li, li a {
     font-size: large;
     font-weight: 800;
     text-decoration: none;
-    color: #fff;
+    color: var(--light);
 }
 
 /* Upload */
@@ -50,7 +61,7 @@ li, li a {
 .uploadcontainer {
     width: 200px;
     padding: 50px;
-    background-color: #f6f6f6;
+    background-color: var(--darklight);
     border-radius: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -62,7 +73,7 @@ li, li a {
 }
 .inputcontainer input {
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--light);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: medium;
@@ -70,25 +81,25 @@ li, li a {
 
 .btnSubir {
     border-radius: 20px;
-    color: #fff;
-    border: 2px solid darkolivegreen;
-    background-color: darkolivegreen;
+    color: var(--light);
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .btnSubir:hover {
     transition: ease-out 0.5s;
-    color: darkolivegreen;
-    background-color: #fff;
+    color: var(--primary);
+    background-color: var(--light);
 }
 
 .profile button, .inputcontainer button, .card button {
     cursor: pointer;
     border-radius: 20px;
-    color: #fff;
-    border: 2px solid darkolivegreen;
-    background-color: darkolivegreen;
+    color: var(--light);
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
     padding: 5px 10px;
     font-size: medium;
 }
@@ -96,21 +107,21 @@ li, li a {
 
 .profile button:hover, .inputcontainer button:hover, .card button:hover {
     transition: ease-out 0.5s;
-    color: darkolivegreen;
-    background-color: #fff;
+    color: var(--primary);
+    background-color: var(--light);
 }
 
 input[type=text], input[type=number]{
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid var(--secondary);
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
 }
 
 input[type=text]:focus, input[type=number]:focus {
-    border: 2px solid darkolivegreen;
+    border: 2px solid var(--primary);
 }
 
 /* index */
@@ -157,14 +168,14 @@ input[type=text]:focus, input[type=number]:focus {
 
 button a {
     text-decoration: none;
-    color: #fff;
+    color: var(--light);
     padding: 5px 10px;
     font-size: medium;
 }
 
 button a:hover {
     transition: ease-out 0.5s;
-    color: darkolivegreen;
+    color: var(--primary);
 }
 
 /* Profile */
